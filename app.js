@@ -36,12 +36,13 @@ displayMessage= () => {
  }
 
   render() {
-    console.log(this.state.isConfirmed)
+    const {isConfirmed } = this.state
+    
     return (
      <React.Fragment>
       <h1>Kup bilet na horror roku!</h1>
         <form onSubmit={this.handleFormSubmit}>
-          <input type="checkbox" id="age" onChange={this.handleCheckboxChange} checked={this.state.isConfirmed}/>
+          <input type="checkbox" id="age" onChange={this.handleCheckboxChange} checked={isConfirmed}/>
             <label htmlFor="age">Mam co najmniej 16 lat</label><br/>
             <button type="submit">Kup bilet</button>
         </form>  
